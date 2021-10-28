@@ -1,28 +1,32 @@
-import React, { Component } from "react";
-import { getCourses } from "../api/courseApi";
+import React from 'react';
+
 import Table from "@material-ui/core/Table";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableBody from "@material-ui/core/TableBody";
+import { withStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
 
-class CoursesPage extends Component {
-  state = {
-    courses: [],
-  };
+const styles = (theme) => ({
+    root: {
+      width: "100%",
+      marginTop: theme.spacing.unit * 3,
+      overflowX: "auto",
+    },
+    table: {
+      minWidth: 1080,
+    },
+  });
 
-  componentDidMount() {
-    getCourses().then((courses) => this.setState({ courses: courses }));
-  }
-
-  render() {
-    return (
-      <>
-        <h1> Courses</h1>
-        <Table>
+function CourseList(props){
+    const { classes } = props;
+    return(
+        <Paper className={classes.root}>
+        <Table className={classes.table}>
           <TableHead>
             <TableRow>
-              <TableCell> Course - No</TableCell>
+              <TableCell> Course No</TableCell>
               <TableCell> Title </TableCell>
               <TableCell> Max Capacity </TableCell>
               <TableCell> Description </TableCell>
@@ -32,7 +36,7 @@ class CoursesPage extends Component {
             </TableRow>
           </TableHead>
           <TableBody>
-            {this.state.courses.map((course) => {
+            {props.courses.map((course) => {
               return (
                 <TableRow>
                   <TableCell>{course.course_no}</TableCell>
@@ -46,9 +50,9 @@ class CoursesPage extends Component {
             })}
           </TableBody>
         </Table>
-      </>
+      </Paper>
     );
-  }
+
 }
 
-export default CoursesPage;
+export default withStyles(styles)(CourseList);
