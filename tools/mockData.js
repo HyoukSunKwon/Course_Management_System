@@ -66,26 +66,36 @@ const courses = [
     course_no: "CS-101",
     course_title: "Introduction to Computer Science",
     max_capacity: 6,
+    Description:
+      "Lorem ipsum dolor sit amet, qui essent offendit ut. Ut lorem dissentias theophrastus eos, his in utinam convenire. An utroque explicari adipiscing eum, cu vix nisl graece voluptaria, dolorem propriae mandamus ei vel. Munere officiis eos in, dolore epicuri recteque te est, no mel clita assentior. Vis at malorum concludaturque, te affert ullamcorper per, est offendit necessitatibus ea.",
   },
   {
     course_no: "CB-101",
     course_title: "Database",
     max_capacity: 3,
+    Description:
+      "Lorem ipsum dolor sit amet, qui essent offendit ut. Ut lorem dissentias theophrastus eos, his in utinam convenire. An utroque explicari adipiscing eum, cu vix nisl graece voluptaria, dolorem propriae mandamus ei vel. Munere officiis eos in, dolore epicuri recteque te est, no mel clita assentior. Vis at malorum concludaturque, te affert ullamcorper per, est offendit necessitatibus ea.",
   },
   {
     course_no: "PF-101",
     course_title: "Programming Fundamentals",
     max_capacity: 5,
+    Description:
+      "Lorem ipsum dolor sit amet, qui essent offendit ut. Ut lorem dissentias theophrastus eos, his in utinam convenire. An utroque explicari adipiscing eum, cu vix nisl graece voluptaria, dolorem propriae mandamus ei vel. Munere officiis eos in, dolore epicuri recteque te est, no mel clita assentior. Vis at malorum concludaturque, te affert ullamcorper per, est offendit necessitatibus ea.",
   },
   {
     course_no: "MA-201",
     course_title: "Calculus",
     max_capacity: 5,
+    Description:
+      "Lorem ipsum dolor sit amet, qui essent offendit ut. Ut lorem dissentias theophrastus eos, his in utinam convenire. An utroque explicari adipiscing eum, cu vix nisl graece voluptaria, dolorem propriae mandamus ei vel. Munere officiis eos in, dolore epicuri recteque te est, no mel clita assentior. Vis at malorum concludaturque, te affert ullamcorper per, est offendit necessitatibus ea.",
   },
   {
     course_no: "WP-201",
     course_title: "Web Programming",
     max_capacity: 5,
+    Description:
+      "Lorem ipsum dolor sit amet, qui essent offendit ut. Ut lorem dissentias theophrastus eos, his in utinam convenire. An utroque explicari adipiscing eum, cu vix nisl graece voluptaria, dolorem propriae mandamus ei vel. Munere officiis eos in, dolore epicuri recteque te est, no mel clita assentior. Vis at malorum concludaturque, te affert ullamcorper per, est offendit necessitatibus ea.",
   },
 ];
 
