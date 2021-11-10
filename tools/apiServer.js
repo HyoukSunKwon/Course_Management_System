@@ -75,7 +75,7 @@ function createSlug(value) {
 
 function validateCourse(course) {
   if (!course.title) return "Title is required.";
-  if (!course.authorId) return "Author is required.";
-  if (!course.category) return "Category is required.";
+  if (!course.course_no) return "course_no is required.";
+  if (!course.max_capacity) return "max_capacity is required.";
   return "";
 }

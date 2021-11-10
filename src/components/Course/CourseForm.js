@@ -1,60 +1,41 @@
 import React from "react";
+import TextInput from "../common/TextInput";
 
 function CourseForm(props) {
   return (
-    <form>
-      <div class="form-group">
-        <label for="CourseNo"> Course No </label>
-        <input
-          id="course_no"
-          type="text"
-          onChange={props.onChange}
-          name="CourseNo"
-          class="form-control"
-          value={props.course.courseNo}
-        />
-      </div>
+    <form onSubmit={props.onSubmit}>
+      <TextInput
+        id="course_no"
+        label="Course_NO"
+        onChange={props.onChange}
+        name="CourseNo"
+        value={props.course.courseNo}
+      />
 
-      <div class="form-group">
-        <label for="title"> Title </label>
-        <input
-          id="title"
-          type="text"
-          onChange={props.onChange}
-          name="title"
-          className="form-control"
-          value={props.course.title}
-        />
-      </div>
+      <TextInput
+        id="title"
+        label="Title"
+        onChange={props.onChange}
+        name="title"
+        value={props.course.title}
+      />
 
-      <div className="form-group">
-        <label htmlFor="maxcapacity"> Max Capacity </label>
-        <div className="field">
-          <input
-            id="maxcapacity"
-            type="text"
-            onChange={props.onChange}
-            name="maxcapacity"
-            className="form-control"
-            value={props.course.maxcapacity}
-          />
-        </div>
-      </div>
+      <TextInput
+        id="maxcapacity"
+        label="Max Capacity"
+        onChange={props.onChange}
+        name="maxcapacity"
+        value={props.course.maxcapacity}
+      />
 
-      <div className="form-group">
-        <label htmlFor="description"> Description </label>
-        <div className="field">
-          <input
-            id="description"
-            type="text"
-            onChange={props.onChange}
-            name="description"
-            className="form-control"
-            value={props.course.description}
-          />
-        </div>
-      </div>
-
+      <TextInput
+        id="description"
+        label=" Description"
+        onChange={props.onChange}
+        name="description"
+        className="form-control"
+        value={props.course.description}
+      />
       <input type="submit" value="Save" className="btn btn-primary" />
     </form>
   );
