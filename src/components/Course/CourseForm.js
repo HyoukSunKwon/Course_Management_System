@@ -8,33 +8,33 @@ function CourseForm(props) {
         id="course_no"
         label="Course_NO"
         onChange={props.onChange}
-        name="CourseNo"
-        value={props.course.courseNo}
+        name="course_no"
+        value={props.course.course_no}
       />
 
       <TextInput
         id="title"
         label="Title"
         onChange={props.onChange}
-        name="title"
-        value={props.course.title}
+        name="course_title"
+        value={props.course.course_title}
       />
 
       <TextInput
         id="maxcapacity"
         label="Max Capacity"
         onChange={props.onChange}
-        name="maxcapacity"
-        value={props.course.maxcapacity}
+        name="max_capacity"
+        value={props.course.max_capacity}
       />
 
       <TextInput
         id="description"
         label=" Description"
         onChange={props.onChange}
-        name="description"
+        name="Description"
         className="form-control"
-        value={props.course.description}
+        value={props.course.Description}
       />
       <input type="submit" value="Save" className="btn btn-primary" />
     </form>

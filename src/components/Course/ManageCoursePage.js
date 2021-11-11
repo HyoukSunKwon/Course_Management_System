@@ -5,9 +5,9 @@ import * as courseApi from "../../api/courseApi";
 const ManageCoursePage = (props) => {
   const [course, setCourse] = useState({
     course_no: "",
-    title: "",
-    maxcapacity: null,
-    description: "",
+    course_title: "",
+    max_capacity: null,
+    Description: "",
   });
 
   function handleChange(event) {

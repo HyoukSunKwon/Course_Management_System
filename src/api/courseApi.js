@@ -18,12 +18,12 @@ export function getCourseBySlug(slug) {
 }
 
 export function saveCourse(course) {
-  return fetch(baseUrl + (course.id || ""), {
-    method: course.id ? "PUT" : "POST", // POST for create, PUT to update when id already exists.
+  return fetch(baseUrl + (course.course_no || ""),{
+    method: course.course_no ? "PUT" : "POST", // POST for create, PUT to update when id already exists.
     headers: { "content-type": "application/json" },
     body: JSON.stringify({
       ...course,
-    }),
+    })
   })
     .then(handleResponse)
     .catch(handleError);
