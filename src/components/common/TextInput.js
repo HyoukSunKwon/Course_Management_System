@@ -8,7 +8,7 @@ function TextInput(props) {
   }
   return (
     <div className={wrapperClass}>
-      <label htmlFor={props.title}> {props.label} </label>
+      <label htmlFor={props.id}> {props.label} </label>
       <div className="field">
         <input
           id={props.id}
@@ -26,8 +26,8 @@ function TextInput(props) {
 
 TextInput.propTypes = {
   id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  lable: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  lable: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string,
   error: PropTypes.string,

@@ -1,4 +1,5 @@
 import { handleResponse, handleError } from "./apiUtils";
+
 const baseUrl = process.env.REACT_APP_API_URL + "/courses/";
 
 export function getCourses() {
@@ -6,6 +7,7 @@ export function getCourses() {
 }
 
 export function getCourseBySlug(slug) {
+  console.log("here is " + baseUrl);
   return fetch(baseUrl + "?slug=" + slug)
     .then((response) => {
       if (!response.ok) throw new Error("Network response was not ok.");
@@ -18,12 +20,14 @@ export function getCourseBySlug(slug) {
 }
 
 export function saveCourse(course) {
-  return fetch(baseUrl + (course.course_no || ""),{
+  return fetch(baseUrl + (course.course_no || ""), {
     method: course.course_no ? "PUT" : "POST", // POST for create, PUT to update when id already exists.
     headers: { "content-type": "application/json" },
     body: JSON.stringify({
       ...course,
-    })
+      // Parse authorId to a number (in case it was sent as a string).
+      //authorId: parseInt(course.authorId, 10),
+    }),
   })
     .then(handleResponse)
     .catch(handleError);
